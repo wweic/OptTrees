@@ -21,6 +21,7 @@ Evaluating Test Instances
 
 Given a tree ensemble file and a test instances file, you can use any of the drivers provided in `src/` to compute scores. By default, these drivers only measure the elapsed time to evaluate a single instance and report it in nanoseconds.
 
+	mkdir out
 	make
 	out/<implementation> -ensemble <tree-ensemble-file> -instances <test-instances-file> \
 	                     -maxLeaves <max-number-of-leaves-from-jforests> [-print]

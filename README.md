@@ -11,7 +11,8 @@ Tree Ensemble File
 
 To convert a tree ensemble created by jforests into a tree compatible with the OptTrees framework, please use the following java driver under `util/`:
 
-	java TreeUtility -input jforests-ensemble-output-xml -mode [tree|codegen]
+	cd util
+	gradle run  --args="-input ../sample/jforests.ensemble.xml -mode tree"
 
 By setting `-mode` to `codegen`, the driver will output a hard-coded ensemble with if-else blocks (i.e., the CodeGen implementation). Otherwise, the jforest ensemble will be formatted such that it can be read by OptTrees. Note that, this driver prints the output to stdout.
 

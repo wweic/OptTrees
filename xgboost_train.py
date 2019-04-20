@@ -17,7 +17,7 @@ def main():
 
     print("Training")
     bst = xgb.train(param, dtrain, num_round)
-    # make prediction
+    bst.dump_model('/tmp/tree.model')
 
     print("Predicting")
     start = time.time()
